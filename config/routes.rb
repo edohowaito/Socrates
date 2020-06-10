@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'problem/new'
   get 'sessions/new'
 
   root 'pages#index'
