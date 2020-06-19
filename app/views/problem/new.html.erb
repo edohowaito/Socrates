@@ -1,2 +1,82 @@
-<h1>Problem#new</h1>
-<p>Find me in app/views/problem/new.html.erb</p>
+<div class="topic-new-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h1 class="text-conter">タイトル(悩み・問題)</h1>
+        <%= form_for @problem,url: problems_create_path do |f| %>
+          <div class="form-group">
+            <%= f.label :troubl %>
+            <%= f.text_area :troubl, class: 'form-control' %>
+            <%= f.hidden_field :user_id, :value => params[:user_id] %>
+          </div>
+        <% end %>
+        
+        <h1 class="text-conter">明確化の質問</h1>
+        <%= form_for @problem,url: problems_create_path do |f| %>
+          <div class="form-group">
+            <%= f.label :clarification %>
+            <%= f.text_area :clarification, class: 'form-control' %>
+            <%= f.hidden_field :user_id, :value => params[:user_id] %>
+          </div>
+        <% end %>
+        
+        <h1 class="text-conter">前提の質問</h1>
+        <%= form_for @problem,url: problems_create_path do |f| %>
+          <div class="form-group">
+            <%= f.label :premise %>
+            <%= f.text_area :premise, class: 'form-control' %>
+            <%= f.hidden_field :user_id, :value => params[:user_id] %>
+          </div>
+        <% end %>
+        
+        <h1 class="text-conter">証拠の質問</h1>
+        <%= form_for @problem,url: problems_create_path do |f| %>
+          <div class="form-group">
+            <%= f.label :evidence %>
+            <%= f.text_area :evidence, class: 'form-control' %>
+            <%= f.hidden_field :user_id, :value => params[:user_id] %>
+          </div>
+        <% end %>
+        
+        <h1 class="text-conter">起源の質問</h1>
+        <%= form_for @problem,url: problems_create_path do |f| %>
+          <div class="form-group">
+            <%= f.label :origin %>
+            <%= f.text_area :origin, class: 'form-control' %>
+            <%= f.hidden_field :user_id, :value => params[:user_id] %>
+          </div>
+        <% end %>
+        
+        <h1 class="text-conter">結果の質問</h1>
+        <%= form_for @problem,url: problems_create_path do |f| %>
+          <div class="form-group">
+            <%= f.label :result %>
+            <%= f.text_area :result, class: 'form-control' %>
+            <%= f.hidden_field :user_id, :value => params[:user_id] %>
+          </div>
+        <% end %>
+        
+        <h1 class="text-conter">視点の質問</h1>
+        <%= form_for @problem,url: problems_create_path do |f| %>
+          <div class="form-group">
+            <%= f.label :viewpoint %>
+            <%= f.text_area :viewpoint, class: 'form-control' %>
+            <%= f.hidden_field :user_id, :value => params[:user_id] %>
+          </div>
+        <% end %>
+        
+        <h1 class="text-conter">仮定の質問</h1>
+        <%= form_for @problem,url: problems_create_path do |f| %>
+          <div class="form-group">
+            <%= f.label :assumption %>
+            <%= f.text_area :assumption, class: 'form-control' %>
+            <%= f.hidden_field :user_id, :value => params[:user_id] %>
+          </div>
+        <% end %>
+        
+        <%= f.submit '登録', class: 'btn btn-black btn-block' %>
+        
+      </div>
+    </div>
+  </div>
+</div>

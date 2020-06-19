@@ -14,6 +14,14 @@ ActiveRecord::Schema.define(version: 2020_06_10_221730) do
 
   create_table "problems", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
+    t.string "troubl"
+    t.string "clarification"
+    t.string "premise"
+    t.string "evidence"
+    t.string "origin"
+    t.string "result"
+    t.string "viewpoint"
+    t.string "assumption"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
