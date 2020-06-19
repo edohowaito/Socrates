@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <h1 class="text-conter">タイトル(悩み・問題)</h1>
-        <%= form_for @problem,url: problems_create_path do |f| %>
+        <%= form_for @problem do |f| %>
           <div class="form-group">
             <%= f.label :troubl %>
             <%= f.text_area :troubl, class: 'form-control' %>
